@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<ion-content fullscreen class="fondo"> 
+  <ion-list class="lista">
+
+    <ion-item>
+        <img src="assets/menu/fondoHome.png" style="border-radius: 15px;">
+    </ion-item>
+    
+    <ion-item class="itemLista">
+      <ion-label>
+        <h2 style="text-align: center; font-weight: bold; color: rgb(141, 98, 5);">Lista de Actuaciones</h2>
+        <hr>
+        <p style="text-align: center; font-size: 14px; font-weight: 800;">Radicado: {{ radicado}}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="itemLista" *ngFor="let i of listaActuaciones">
+      <ion-avatar slot="start">
+        <img src="assets/menu/poder.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{i.descripcion}}</h2>
+        <p><a target="_blank" href="{{url}}{{i.identidadCliente}}/{{i.nombreArchivo}}">{{i.nombreArchivo}}</a></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-segment style="background-color:rgb(126, 79, 9); color:#ffffff">
+        <ion-segment-button style="color:#ffffff" (click)="irProcesos()" value="segment1">
+          <ion-icon name="arrow-back"></ion-icon>
+                      Regresar
+        </ion-segment-button>
+         <ion-segment-button style="color:#ffffff" (click)="irMenu()" value="segment1">
+           <ion-icon name="home"></ion-icon>
+                         Inicio
+          </ion-segment-button>
+        
+ </ion-segment>
+</ion-footer>

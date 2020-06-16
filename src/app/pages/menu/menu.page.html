@@ -1,0 +1,100 @@
+<app-header></app-header>
+
+<ion-content fullscreen class="fondo"> 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="tertiary" href="www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button color="success"><ion-icon name="logo-whatsApp"></ion-icon></ion-fab-button>
+      <ion-fab-button color="warning" href="tel:3116480997">
+             <ion-icon name="call-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="danger"><ion-icon name="power-outline"></ion-icon></ion-fab-button>
+
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list class="lista">
+
+    <ion-item class="itemLista"routerLink="/perfil/{{ identidad }}">
+      <ion-avatar slot="start">
+        <img src="assets/menu/perfil.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Mi Perfil</h2>
+        <p>Información personal Cliente</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="/procesos/{{ identidad }}" class="itemLista">
+      <ion-avatar slot="start">
+        <img src="assets/menu/procesos.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Procesos</h2>
+        <p>Listado de Procesos</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="/contratos/{{ identidad }}" class="itemLista">
+      <ion-avatar slot="start">
+        <img src="assets/menu/contrato.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Contratos</h2>
+        <p>Listado de Contratos</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="/poderes/{{ identidad }}" class="itemLista">
+      <ion-avatar slot="start">
+        <img src="assets/menu/poder.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Poderes</h2>
+        <p>Listado de Poderes</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="/menu-alertas/{{ identidad }}" class="itemLista"> 
+      <ion-avatar slot="start">
+        <img src="assets/menu/alertas.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Alertas</h2>
+        <p>Actuaciones del día, por vencer y vencidas</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="/ayuda/{{ identidad }}" class="itemLista">
+      <ion-avatar slot="start">
+        <img src="assets/menu/atenciocliente.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Atención al Cliente</h2>
+        <p>Respuestas enviadas del abogado</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="/notificaciones/{{ identidad }}" class="itemLista">
+      <ion-avatar slot="start">
+        <img src="assets/menu/notificacion.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Notificaciones App</h2>
+        <p>Listado de notificaciones recibidas</p>
+      </ion-label>
+    </ion-item>
+
+   
+  </ion-list>
+</ion-content>
+
+<ion-footer class="footer"> 
+  <ion-segment>
+  <ion-icon name="home"></ion-icon>Menú Opciones
+ </ion-segment>
+</ion-footer>
+

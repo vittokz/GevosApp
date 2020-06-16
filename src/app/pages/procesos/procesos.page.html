@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<ion-content fullscreen class="fondo"> 
+  <ion-list class="lista">
+
+    <ion-item>
+        <img src="assets/menu/alertaBuscar.jpg" style="border-radius: 15px;">
+    </ion-item>
+    <br>
+    <ion-item class="itemLista">
+      <ion-label>
+        <h2 style="text-align: center; font-weight: bold; color: rgb(141, 98, 5);">Lista de Procesos</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item-sliding padding  *ngFor="let item of listaProcesos; let i = index">
+      <ion-item class="itemLista">
+        <ion-avatar slot="start">
+          <img src="assets/menu/procesos.png">
+        </ion-avatar>
+        <ion-label>Radicado</ion-label>
+        <p>{{ item.radicado}}</p>
+      </ion-item>
+  
+      <ion-item-options side="start" routerLink="/procesos-actuaciones/{{item.id}}/{{item.identidadCliente}}/{{item.radicado}}">
+        <ion-item-option
+        style="background-color: rgb(238, 191, 36); color: rgb(105, 65, 4); font-weight: bold;">
+             Actuaciones
+        </ion-item-option>
+      </ion-item-options>  
+
+      <ion-item-options class="itemLista" side="end">
+        <ion-item-option (click)="infoProceso(item)"  
+        style="background-color: rgb(238, 191, 36); color: rgb(105, 65, 4); font-weight: bold;">
+           Ver Información
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>  
+</ion-content>
+
+<ion-footer>
+  <ion-segment style="background-color:rgb(126, 79, 9); color:#ffffff">
+          <ion-segment-button style="color:#ffffff" (click)="irMenu()" value="segment1">
+           <ion-icon name="home"></ion-icon>
+                         Inicio
+          </ion-segment-button>
+ </ion-segment>
+</ion-footer>

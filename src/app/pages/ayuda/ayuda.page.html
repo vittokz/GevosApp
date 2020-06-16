@@ -1,0 +1,32 @@
+<app-header></app-header>
+<ion-content fullscreen class="fondo">
+  <ion-card>
+    <ion-card-header style="background-color: rgb(126, 79, 9)!important; color: #ffffff; text-align: center; font-size: 18px;">
+       <div>Atención al Cliente</div>
+    </ion-card-header>
+  
+      <ion-list *ngFor="let i of datosCliente" class="lista">
+        <ion-img src="assets/menu/atenciocliente.png" style="width: 20%; margin: auto;"></ion-img><hr>
+        <p style="text-align: justify; padding: 10px; color: white;">
+          Señor (a) {{ i.nombre}} {{ i.apellido}} dejanos tu mensaje y nos contactaremos lo mas pronto posible, .</p>
+          <form [formGroup] ="formAtencion">
+            <ion-item>
+              <ion-textarea style="background-color:rgb(247, 246, 214); border-color: rgb(7, 7, 44) !important;" formControlName="descripcion" placeholder="Escribe tu mensaje">
+              </ion-textarea><br>
+            </ion-item>
+              
+              <ion-button color="warning" (click)="enviar()" [disabled]="!formAtencion.valid" type="submit" expand="full">
+                Enviar</ion-button>      
+         </form>
+      </ion-list>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-segment style="background-color:rgb(126, 79, 9); color:#ffffff">
+          <ion-segment-button style="color:#ffffff" (click)="irMenu()" value="segment1">
+           <ion-icon name="home"></ion-icon>
+                         Inicio
+          </ion-segment-button>
+ </ion-segment>
+</ion-footer>

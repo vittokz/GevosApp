@@ -1,0 +1,37 @@
+ <div style="background-color: rgb(255, 255, 255); height: 20%; margin-top: 100px;">
+    <img style="margin: auto; display: block; margin-bottom: 5px; width: 70%;" src="assets/gevos.png">
+ </div>
+ <ion-content style="background-image: url('assets/login/fondoHome.png');">
+    <div class="fondo">
+      <form [formGroup]="formLogin">
+        <ion-grid>
+          <ion-row>
+            <ion-col>    
+              <ion-item>
+                <ion-icon name="person" slot="start"></ion-icon>
+                <ion-input formControlName="identidad" class="input" type="number" placeholder="Identidad"></ion-input>  
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>    
+              <ion-item>
+                <ion-icon name="key" slot="start"></ion-icon>
+                <ion-input formControlName="clave" class="input" type="password" placeholder="Password"></ion-input>  
+              </ion-item>
+            </ion-col>
+          </ion-row>
+                <ion-button (click)="login()" [disabled]="!formLogin.valid"type="submit" color="warning" expand="full">Ingresar</ion-button>  
+        </ion-grid>
+      </form>
+      <hr>
+      <div style="background-color: red;width: 100%; height: 25px;" *ngIf="logueado">
+        <span style="font-size: 14px; font-weight: 900;  color: white;">
+          <p style="text-align: center;"> Error en los datos ingresados !!!</p></span>
+    </div>
+      <hr>
+      <p style="color: white; text-align: center; font-weight: bold;">Solicitar recuperación <br>de contraseña 
+      </p>
+      <ion-button type="submit" color="warning" expand="full">Ir</ion-button>
+      </div>
+ </ion-content>

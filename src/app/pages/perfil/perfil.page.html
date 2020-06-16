@@ -1,0 +1,41 @@
+<app-header></app-header>
+<ion-content fullscreen class="fondo">
+  <ion-card>
+    <ion-card-header style="background-color: rgb(126, 79, 9)!important; color: #ffffff; text-align: center; font-size: 18px;">
+       <div>Perfil de Usuario</div>
+    </ion-card-header>
+  
+      <ion-list *ngFor="let i of datosCliente" class="lista">
+        <ion-img src="assets/menu/perfil.png" style="width: 20%; margin: auto;"></ion-img><hr>
+        <ion-item class="itemlista">
+          <ion-icon slot="start" name="body-outline"></ion-icon>
+          <ion-label>{{ i.identidad}}</ion-label>
+        </ion-item>
+        <ion-item class="itemlista">
+          <ion-icon  slot="start" name="person-circle-outline"></ion-icon>
+          <ion-label>{{ i.nombre}} {{ i.apellido}}</ion-label>
+        </ion-item>
+        <ion-item class="itemlista">
+          <ion-icon slot="start" name="phone-portrait-outline"></ion-icon>
+          <ion-label>{{ i.celular}}</ion-label>
+        </ion-item>
+        <ion-item class="itemlista">
+          <ion-icon slot="start" name="body-outline"></ion-icon>
+          <ion-label> {{ i.email}}</ion-label>
+        </ion-item>
+        <ion-item class="itemlista">
+          <ion-icon slot="start" name="body-outline"></ion-icon>
+          <ion-label> {{ i.direccion}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-segment style="background-color:rgb(126, 79, 9); color:#ffffff">
+          <ion-segment-button style="color:#ffffff" (click)="irMenu()" value="segment1">
+           <ion-icon name="home"></ion-icon>
+                         Inicio
+          </ion-segment-button>
+ </ion-segment>
+</ion-footer>

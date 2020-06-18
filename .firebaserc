@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "notificacionesgevosapp": {
+      "hosting": {
+        "app": [
+          "notificacionesgevosapp"
+        ]
+      }
+    }
+  }
+}

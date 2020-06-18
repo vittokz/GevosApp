@@ -1,3 +1,6 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 #container {
   text-align: center;
   position: absolute;
@@ -31,19 +34,19 @@
   text-decoration: none;
 }
 .fondo{
-  margin: 10px;
-  padding: 10px;
-  height: 80%;
+  margin: 20px;
+  padding: 20px;
+  height: 90%;
   border-radius: 6px;
-  background-image: linear-gradient(to right, rgb(126, 79, 9) , rgb(216, 151, 29));
+  background-image: linear-gradient(to right, rgb(126, 79, 9) , rgb(243, 127, 18));
 }
 
 .fondoContent{
-    --ion-background-color: rgb(245, 218, 145);
+  --ion-background-color: linear-gradient(to right, rgb(248, 220, 128) , rgb(243, 241, 236));
 }
 
 .itemColor{
-  background-color: green;
+  --ion-background-color: green;
 }
 
 .input{

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { PushService } from 'src/app/servicios/push/push.service';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,20 @@ export class HomePage {
 
   async alertaIngreso() {
     const alert = await this.alertCtl.create({
+      header: 'GevosColombia App',
+      subHeader: '',
+      message: 'Bienvenido a nuestra App',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  async alertaError() {
+    const alert = await this.alertCtl.create({
       header: 'Gevos Colombia App',
       subHeader: '',
-      message: 'Bienvenido a Gevos Colombia App',
+      message: 'Sus datos son incorrectos',
       buttons: ['OK']
     });
 
@@ -44,7 +56,7 @@ export class HomePage {
            this.router.navigate(['/menu', form.identidad]);
          }
          else{
-           this.logueado="mal";
+          this.alertaError();
          }
       }
     );

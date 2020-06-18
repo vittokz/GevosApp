@@ -11,6 +11,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FCM } from '@ionic-native/fcm/ngx';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,11 +24,14 @@ import { ReactiveFormsModule } from '@angular/forms';
      IonicModule.forRoot(), 
      AppRoutingModule, 
      ComponentsModule,
-     HttpClientModule
+     HttpClientModule,
+     IonicStorageModule.forRoot()
     ],
     
   providers: [
+    OneSignal,
     StatusBar,
+    FCM,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

@@ -39,6 +39,11 @@ const routes: Routes = [
     path: 'procesos-actuaciones/:idProceso/:iden/:radicado',
     loadChildren: () => import('./pages/procesos-actuaciones/procesos-actuaciones.module').then( m => m.ProcesosActuacionesPageModule)
   },
+  {
+    path: 'alertas/:iden',
+    loadChildren: () => import('./pages/alertas/alertas.module').then( m => m.AlertasPageModule)
+  },
+
 ];
 
 @NgModule({

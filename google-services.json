@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "717249640006",
+    "firebase_url": "https://notificacionesgevosapp.firebaseio.com",
+    "project_id": "notificacionesgevosapp",
+    "storage_bucket": "notificacionesgevosapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717249640006:android:13710e382706b68384fc47",
+        "android_client_info": {
+          "package_name": "com.gevos.vittorio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717249640006-r50r8inlm4llusd1aimdm96m2l5mvslf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5Jft7tz8ogUKrqKFm63YAdduFwxyGnOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717249640006-r50r8inlm4llusd1aimdm96m2l5mvslf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

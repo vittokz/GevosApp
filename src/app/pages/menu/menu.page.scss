@@ -1,9 +1,12 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
 .footer{
     padding: 10px;
     height: 50px;
     color: white;
     font-size: 22px;
-    background-image: linear-gradient(to right, rgb(126, 79, 9) , rgb(216, 151, 29));
+    background-image: linear-gradient(to right, rgb(126, 79, 9) ,rgb(243, 127, 18));
 }
 .lista{
     background-image: linear-gradient(to right, rgb(126, 79, 9) , rgb(216, 151, 29));
@@ -12,7 +15,7 @@
     border-radius: 10px;
 }
 .fondo{
-    --ion-background-color: linear-gradient(to right, rgb(126, 79, 9) , rgb(216, 151, 29));
+    --ion-background-color: linear-gradient(to right, rgb(126, 79, 9) ,rgb(243, 127, 18));
 }
 .itemLista{
     border-radius: 15px;
